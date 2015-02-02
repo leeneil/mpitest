@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
 	if (argc > 1)
 		N = atoi(argv[1]);
 
-	cout << "N = " << N << endl;
 	srand(time(NULL));
 	MPI_Init(&argc, &argv);
 
@@ -61,6 +60,7 @@ int main(int argc, char *argv[])
 		}
 		global_pi = 4.0 * global_pi / world_size;
 		// output result
+		cout << "N = " << N << endl;
 		cout << "pi = " << global_pi << endl;
 		cout << "Time elasped: " << t2 - t1 << endl;
 	} // end of if
