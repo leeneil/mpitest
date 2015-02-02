@@ -6,6 +6,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <cmath>
+#include <cstdint>
 #include <mpi.h>
 using namespace std;
 
@@ -62,10 +63,10 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
-double cal_pi(int N) {
+double cal_pi(int M) {
 	int count = 0;
 	double x, y, r, result;
-	for (int i = 0; i < N; i++) {
+	for (int i = 0; i < M; i++) {
 		x = 1.0 * rand(time(NULL)) / INT_MAX;
 		y = 1.0 * rand(time(NULL)) / INT_MAX;
 		r = sqrt( pow(x,2) + pow(y,2) );
@@ -73,6 +74,6 @@ double cal_pi(int N) {
 			count++;
 		}
 	}
-	result = 1.0 * count / N;
+	result = 1.0 * count / M;
 	return result;
 }
