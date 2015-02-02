@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
 	N = 1000;
 	if (argc > 1)
 		N = atoi(argv[1]);
-	
+
+	cout << "N = " << N << endl;
 	srand(time(NULL));
 	MPI_Init(&argc, &argv);
 
