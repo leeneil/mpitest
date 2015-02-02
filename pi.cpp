@@ -1,6 +1,6 @@
 // ping_pong.cpp
 
-#define N 100
+
 
 #include <iostream>
 #include <ctime>
@@ -14,6 +14,11 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {	
+
+	N = 1000;
+	if (argc > 1)
+		N = atoi(argv[1]);
+	
 	srand(time(NULL));
 	MPI_Init(&argc, &argv);
 
