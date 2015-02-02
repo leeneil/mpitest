@@ -14,7 +14,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {	
-
+	srand(time(NULL));
 	MPI_Init(&argc, &argv);
 
 	// get world size
@@ -67,8 +67,8 @@ double cal_pi(int M) {
 	int count = 0;
 	double x, y, r, result;
 	for (int i = 0; i < M; i++) {
-		x = 1.0 * rand(time(NULL)) / INT_MAX;
-		y = 1.0 * rand(time(NULL)) / INT_MAX;
+		x = 1.0 * rand() / INT_MAX;
+		y = 1.0 * rand() / INT_MAX;
 		r = sqrt( pow(x,2) + pow(y,2) );
 		if (r < 1) {
 			count++;
