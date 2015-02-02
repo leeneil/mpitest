@@ -7,10 +7,9 @@ Some test scripts for MPI
  mpicxx pi.cpp -o pi
  ```
  
- # Run
+# Run
  
- 
- ## Use default N = 1000
+## Use default N = 1000
  ```
 $ mpirun -np 24 ./pi
 N = 1000
