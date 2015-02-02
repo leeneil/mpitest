@@ -15,7 +15,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {	
 
-	N = 1000;
+	int N = 1000;
 	if (argc > 1)
 		N = atoi(argv[1]);
 
